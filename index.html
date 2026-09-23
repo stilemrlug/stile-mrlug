@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="STILE MRLUG — uniformes, dotaciones, gorras bordadas y confección en Saravena, Arauca.">
+  <title>STILE MRLUG | Uniformes, Dotaciones y Gorras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="STILE MRLUG inicio">
+        <img src="logo.jpeg" alt="Logo STILE MRLUG">
+      </a>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="cart-btn" id="openCart">🛒 <span>Carrito</span> <b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">SARAVENA · ARAUCA</span>
+          <h1>Viste tu trabajo.<br><em>Viste tu estilo.</em></h1>
+          <p>Uniformes, dotaciones, gorras bordadas y confección personalizada para empresas y clientes.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#catalogo">Ver catálogo</a>
+            <a class="btn secondary" target="_blank" href="https://wa.me/573203088653?text=Hola%20STILE%20MRLUG%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos.">WhatsApp</a>
+          </div>
+          <div class="trust"><span>✓ Atención por WhatsApp</span><span>✓ Pedidos personalizados</span></div>
+        </div>
+        <div class="hero-card">
+          <img src="logo.jpeg" alt="STILE MRLUG">
+          <div class="hero-card-text"><strong>Confección & dotación</strong><span>Calidad para tu equipo y tu marca.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="container category-grid">
+        <button data-filter="todos"><span>✦</span> Todo</button>
+        <button data-filter="gorras"><span>◉</span> Gorras</button>
+        <button data-filter="uniformes"><span>✂</span> Uniformes</button>
+        <button data-filter="dotaciones"><span>◆</span> Dotaciones</button>
+        <button data-filter="confeccion"><span>✿</span> Confección</button>
+      </div>
+    </section>
+
+    <section class="catalog section" id="catalogo">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">NUESTRO CATÁLOGO</span><h2>Productos destacados</h2></div>
+          <p>Selecciona un producto para agregarlo a tu pedido. Los precios se cotizan por WhatsApp en esta primera versión.</p>
+        </div>
+        <div class="products" id="products"></div>
+      </div>
+    </section>
+
+    <section class="about section" id="nosotros">
+      <div class="container about-grid">
+        <div>
+          <span class="eyebrow">STILE MRLUG</span>
+          <h2>Confección pensada para tu negocio.</h2>
+          <p>Trabajamos uniformes, dotaciones, gorras bordadas y prendas personalizadas. Cuéntanos qué necesitas y preparamos una propuesta para ti.</p>
+          <a class="text-link" target="_blank" href="https://wa.me/573203088653?text=Hola%20STILE%20MRLUG%2C%20quiero%20una%20cotizaci%C3%B3n.">Solicitar cotización →</a>
+        </div>
+        <div class="about-points">
+          <div><b>01</b><span>Diseños personalizados</span></div>
+          <div><b>02</b><span>Pedidos para empresas</span></div>
+          <div><b>03</b><span>Atención directa por WhatsApp</span></div>
+          <div><b>04</b><span>Saravena, Arauca</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <div class="container contact-card">
+        <div><span class="eyebrow">HABLEMOS</span><h2>¿Qué necesitas confeccionar?</h2><p>Escríbenos y cuéntanos tu idea, cantidad, tallas y fecha que necesitas.</p></div>
+        <a class="btn primary big" target="_blank" href="https://wa.me/573203088653?text=Hola%20STILE%20MRLUG%2C%20quiero%20hacer%20un%20pedido.">Escribir por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> STILE MRLUG</span><span>Saravena · Arauca</span><span>WhatsApp 320 308 8653</span></div></footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart" id="cart" aria-label="Carrito de compras">
+    <div class="cart-head"><h3>Tu pedido</h3><button id="closeCart">✕</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-foot">
+      <div class="cart-note">Los precios se confirman por WhatsApp.</div>
+      <button class="btn primary full" id="sendOrder">Enviar pedido por WhatsApp</button>
+      <button class="btn ghost full" id="clearCart">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
