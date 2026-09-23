@@ -12,7 +12,9 @@ const products = [
   {id:11,name:'Uniforme de cocina',cat:'uniformes',desc:'Chaqueta y pantalón para cocina.',img:'WhatsApp Image 2026-09-23 at 9.12.23 AM.jpeg'},
   {id:12,name:'Dotación Delipan',cat:'dotaciones',desc:'Propuesta de dotación empresarial.',img:'WhatsApp Image 2026-09-23 at 9.12.24 AM (1).jpeg'},
   {id:13,name:'Uniforme antifluido personalizado',cat:'uniformes',desc:'Modelo de uniforme para trabajo.',img:'WhatsApp Image 2026-09-23 at 9.12.24 AM (2).jpeg'},
-  {id:14,name:'Delipan — detalle',cat:'dotaciones',desc:'Detalle de diseño y personalización.',img:'WhatsApp Image 2026-09-23 at 9.12.24 AM.jpeg'}
+{id:14,name:'Delipan - detalle',cat:'dotaciones',desc:'Detalle de diseño y personalización.',img:'WhatsApp Image 2026-09-23 at 9.12.24 AM.jpeg'},
+{id:15,name:'Antifluido azul',cat:'uniformes',desc:'Uniforme antifluido en color azul.',img:'ANTIFLUIDOS AZUL.jpeg'},
+{id:16,name:'Antifluido verde',cat:'uniformes',desc:'Uniforme antifluido en color verde.',img:'ANTIFLUIDOS VERDE.jpeg'}
 ];
 let cart = JSON.parse(localStorage.getItem('stileCart') || '[]');
 const productsEl=document.getElementById('products'), cartEl=document.getElementById('cart'), overlay=document.getElementById('cartOverlay'), cartItems=document.getElementById('cartItems'), countEl=document.getElementById('cartCount');
