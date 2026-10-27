@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2d6b3f">
+<title>Administrar productos | STILE MRLUG</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header><a href="index.html" class="brand">STILE <span>MRLUG</span></a><span>Administración de inventario</span></header>
+<main>
+  <section class="intro">
+    <p class="eyebrow">PANEL PRIVADO</p><h1>Gestiona tu mercancía</h1>
+    <p>Agrega productos desde el celular. Los productos publicados se mostrarán en la tienda.</p>
+  </section>
+  <section id="setupNotice" class="notice hidden"></section>
+  <section id="authPanel" class="panel">
+    <h2>Iniciar sesión</h2>
+    <p>Usa la cuenta autorizada para administrar la tienda.</p>
+    <form id="loginForm">
+      <label>Correo electrónico<input id="email" type="email" autocomplete="username" required></label>
+      <label>Contraseña<input id="password" type="password" autocomplete="current-password" required></label>
+      <button type="submit">Entrar</button>
+    </form>
+    <p id="authMessage" class="message" aria-live="polite"></p>
+  </section>
+  <section id="appPanel" class="hidden">
+    <div class="toolbar"><h2>Mis productos</h2><button id="logoutBtn" class="secondary">Cerrar sesión</button></div>
+    <section class="panel">
+      <h2 id="formTitle">Agregar producto</h2>
+      <form id="productForm">
+        <input type="hidden" id="productId">
+        <div class="fields">
+          <label>Nombre del producto *<input id="name" required maxlength="120" placeholder="Ej. Uniforme antifluido"></label>
+          <label>Precio (COP) *<input id="price" type="number" min="0" step="100" required placeholder="Ej. 85000"></label>
+          <label>Categoría *<select id="category" required><option value="uniformes">Uniformes</option><option value="gorras">Gorras</option><option value="dotaciones">Dotaciones</option><option value="confeccion">Confección</option><option value="otros">Otros</option></select></label>
+          <label>Stock disponible *<input id="stock" type="number" min="0" step="1" required value="0"></label>
+          <label>Tallas disponibles<input id="sizes" placeholder="Ej. S, M, L, XL"></label>
+          <label>Colores disponibles<input id="colors" placeholder="Ej. Azul, negro, verde"></label>
+          <label class="wide">Descripción<textarea id="description" rows="3" placeholder="Detalles del producto"></textarea></label>
+          <label class="wide">Fotografía del producto<input id="photo" type="file" accept="image/*"><small>JPG, PNG o WebP. Si editas sin elegir otra foto, se conserva la actual.</small></label>
+          <div class="wide preview-wrap"><img id="preview" alt="Vista previa" class="hidden"><span id="noPreview">La vista previa aparecerá aquí.</span></div>
+        </div>
+        <div class="actions"><button type="submit" id="saveBtn">Guardar producto</button><button type="button" id="cancelEdit" class="secondary hidden">Cancelar edición</button></div>
+        <p id="formMessage" class="message" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="panel">
+      <div class="toolbar"><h2>Catálogo actual</h2><input id="search" class="search" placeholder="Buscar producto…"></div>
+      <div id="productList" class="product-list"></div>
+    </section>
+  </section>
+</main>
+<footer>STILE MRLUG · Saravena, Arauca</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="admin.js"></script>
+</body></html>
